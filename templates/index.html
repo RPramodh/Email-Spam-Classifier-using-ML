@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Email Spam Classifier
+    </title>
+</head>
+
+<body>
+    <center>
+    <h1>Email Spam Classifier</h1>
+    <div>
+        <form method="post" action="/predict">
+            <textarea name="email-content" rows="12" cols="60" name="content" placeholder="Type or paste your email here">{{email}}</textarea>
+            <div>
+                <button>
+                    Submit 
+                </button>
+                <br>
+                <a href="/">
+                    Reset
+                </a>
+            </div>
+        </form>
+        <h2>{{prediction}}</h2>
+    </div>
+</center>
+</body>
+
+</html>
