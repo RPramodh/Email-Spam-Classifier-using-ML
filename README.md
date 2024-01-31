@@ -1,4 +1,5 @@
-# Email Spam Classifier  [here]([https://your-deployed-app-url.com/])
+# Email Spam Classifier  
+[Do check](https://spam-check-b01h.onrender.com/)
 
 This web application uses a machine learning model to classify emails as spam or not spam (ham). It is built using Flask, Bootstrap, and a trained machine learning model.
 
@@ -16,5 +17,7 @@ Before running the application, make sure you have the following dependencies in
 - Bootstrap (for styling)
 
 ## Try it Out
-Feel free to enter different email content and see how the model classifies them!  
- [here]((https://spam-check-b01h.onrender.com))
+
+Visit the Email Spam Classifier website [here](https://spam-check-b01h.onrender.com/) to test the spam classification functionality.
+
+Feel free to enter different email content and see how the model classifies them!
