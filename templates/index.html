@@ -1,31 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>
-        Email Spam Classifier
-    </title>
+    <title>Email Spam Classifier</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='stealing_mail.jpg') }}");
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #000409;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #000;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <center>
-    <h1>Email Spam Classifier</h1>
-    <div>
-        <form method="post" action="/predict">
-            <textarea name="email-content" rows="12" cols="60" name="content" placeholder="Type or paste your email here">{{email}}</textarea>
-            <div>
-                <button>
-                    Submit 
-                </button>
-                <br>
-                <a href="/">
-                    Reset
-                </a>
-            </div>
-        </form>
-        <h2>{{prediction}}</h2>
+    <div class="center-content">
+        <div class="col-md-6">
+            <h1>Email Spam Classifier</h1>
+            <form method="post" action="/predict">
+                <div class="form-group">
+                    <textarea class="form-control" name="email-content" rows="12" placeholder="Type or paste your email here">{{email}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <br>
+                    <a href="/">Reset</a>
+                </div>
+            </form>
+            <h2>{{prediction}}</h2>
+        </div>
     </div>
-</center>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
