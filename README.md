@@ -1,1 +1,17 @@
-# deploy
+# Email Spam Classifier
+
+This web application uses a machine learning model to classify emails as spam or not spam (ham). It is built using Flask, Bootstrap, and a trained machine learning model.
+
+## Overview
+
+The project consists of a Flask web application that provides a simple user interface for entering email content. The underlying machine learning model, trained on email data, predicts whether the input email is spam or not.
+
+## Prerequisites
+
+Before running the application, make sure you have the following dependencies installed:
+
+- Python
+- Flask
+- scikit-learn (for the machine learning model)
+- Bootstrap (for styling)
+
